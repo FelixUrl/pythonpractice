@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    height: 100%;
+}
+
+.aic {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pt-2 {
+    padding-top: 8px;
+}
+
+.mt-5 {
+    margin-top: 100px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.jcsa {
+    justify-content: space-around;
+}
+
+.vh-75 {
+    height: 75vh;
+}
+
+.bg_blue {
+    background-color: cornflowerblue;
+}
+.row{
+    flex-flow: row;
+    width: 100%;
+}
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+    z-index: 2;
+}
+.content_body{
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.news_container {
+    margin: 1px;
+    padding: 1px;
+    height: 100%;
+}
+.main{
+    padding-top: 80px;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1120px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        max-width: none;
+        margin: 0 10px;
+    }
+}
+
+.card {
+    width: 23%;
+    padding: 1px 3px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: green;
+    height: 120px;
+    margin: 5px 5px;
+    z-index: 2;
+}
+.card-3 {
+    width: 32%;
+    padding: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: red;
+    height: 120px;
+    margin: 10px 1px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 47%;
+    }
+    .card-3{
+        width: 47%;
+    }
+    .main{
+        padding-top: 1px;
+    }
+}
+
+@media (max-width: 430px) {
+    .card {
+        width: 100%;
+    }
+    .card-3{
+        width: 100%;
+    }
+}
+
+.header_block {
+    background-color: cornflowerblue;
+    z-index: 101;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header_content {
+    margin-top: 7px;
+}
+
+@media (max-width: 425px) {
+    .header_block {
+        height: 60px;
+    }
+
+    .header_content {
+        margin-top: 2px;
+    }
+}
+
+.header_logo img {
+    width: 55px;
+    height: 55px;
+    z-index: 102;
+}
+
+.header_link {
+    list-style: none;
+}
+
+.header_link a {
+    text-decoration: none;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    transition: cubic-bezier(0, 0.43, 0.57, 0.99) 0.6s;
+}
+
+.header_link a:hover {
+    color: blue;
+    filter: glow(100%);
+}
+
+.header_burger {
+    display: none;
+    z-index: 4;
+}
+.category{
+    width: 32%;
+    padding: 1px 3px;
+    margin: 5px 5px;
+}
+.category > .text_category{
+    padding: 3px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    background-color: white;
+    z-index: 100;
+}
+.category > .text_spoiler{
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: cubic-bezier(0, 0.42, 0.52, 0.95) 0.45s;
+    transform: translate(0, -50%);
+}
+
+.arrow{
+    cursor: pointer;
+    background-color: white;
+    z-index: 100;
+}
+.arrow:before, .arrow:after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 14px;
+    height: 1px;
+    transition: cubic-bezier(0, 0.42, 0.52, 0.95) 0.45s;
+}
+.arrow:before{
+    margin-left: 10.2px;
+    transform: rotate(-45deg);
+}
+.arrow:after{
+    transform: rotate(45deg);
+}
+.arrow.active:before{
+    transform: rotate(-135deg);
+}
+.arrow.active:after{
+    transform: rotate(135deg);
+}
+.text_spoiler.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0%);
+}
+@media (max-width: 768px){
+    .category{
+        width: 47%;
+    }
+}
+@media (max-width: 420px){
+    .category{
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 25px;
+    }
+
+    .header_burger span {
+        position: absolute;
+        height: 2px;
+        background-color: white;
+        width: 100%;
+        top: 11px;
+        transition: ease-in-out 0.1s;
+    }
+
+    .header_burger:before, .header_burger:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 2px;
+        transition: ease-in-out 0.3s;
+    }
+
+    .header_burger:before {
+        top: 0;
+    }
+
+    .header_burger:after {
+        bottom: 0;
+    }
+
+    .header_nav {
+        opacity: 0;
+        top: -290px;
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: cornflowerblue;
+        transition: cubic-bezier(0.71, 0.5, 0.38, 0.97) 1s;
+        padding-top: 10px;
+    }
+
+    .header_menu {
+        display: block;
+    }
+
+    .header_link {
+        margin: 20px 0 20px 0;
+    }
+
+    .header_menu {
+        width: 100%;
+    }
+
+    .header_burger.active:before {
+        top: 11px;
+        transform: rotate(45deg);
+        transition: ease-in-out 0.3s;
+    }
+
+    .header_burger.active span {
+        top: 11px;
+        transform: rotate(-45deg);
+        transition: ease-in-out 0.3s;
+    }
+
+    .header_burger.active:after {
+        top: 11px;
+        transform: rotate(-45deg);
+        transition: ease-in-out 0.3s;
+    }
+
+    .header_nav.active {
+        top: 68px;
+        opacity: 100;
+        z-index: -100;
+        transition: cubic-bezier(0, 0.49, 0.38, 0.97) 0.5s;
+    }
+
+    .mt-5 {
+        margin-top: 90px;
+    }
+    .header_content{
+        z-index: 100;
+    }
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+@media (max-width: 425px) {
+    .header_nav.active {
+        top: 58px;
+    }
+
+    .mt-5 {
+        margin-top: 70px;
+    }
+}
