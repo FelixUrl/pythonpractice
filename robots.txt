@@ -5,3 +5,7 @@ Disallow: /nogooglebot/
 # Group 2
 User-agent: *
 Allow: /
+
+User-agent: Yandex
+Disallow:
+Clean-param: ref /pythonpractice/page.pl
